@@ -15,16 +15,16 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/agpl-3.0.html/>.
 */
 
-extern crate sysinfo;
-//use sysinfo::{NetworkExt, NetworksExt, ProcessExt, System, SystemExt};
-use sysinfo::{System, SystemExt};
 
 fn main() {
-    let mut sys = System::new_all();
-    sys.refresh_all();
-
-    println!("=> disks:");
-    for disk in sys.disks() {
-        println!("{:?}", disk);
+    let shell = "SHELL";
+    match std::env::var(shell) {
+        Ok(shell) => println!("Shell => {}", shell),
+        Err(e) => panic!("Shell somehow doesn't exist, how'd you fuck up this badly?! ({})", e),
+    }
+    let user = "USER";
+    match std::env::var(user) {
+        Ok(user) => println!("User => {}", user),
+        Err(e) => panic!("Somehow you don't seem to have a name, you anonymous hacker you ({})", e),
     }
 }
