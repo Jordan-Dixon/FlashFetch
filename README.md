@@ -4,7 +4,7 @@
 <br>
 <br>
 
-Freshfetch is an alternative to [Neofetch](https://github.com/dylanaraps/neofetch)
+FlashFetch is an alternative to [Neofetch](https://github.com/dylanaraps/neofetch)
 written in Rust with a focus on customization.
 
 ## Warning:
